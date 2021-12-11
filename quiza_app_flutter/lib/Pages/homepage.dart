@@ -15,6 +15,14 @@ class _HomePageState extends State<HomePage> {
   bool option2 = false;
   bool option3 = false;
   bool option4 = false;
+  var questionIndex = 0;
+
+  List<String> questions = [
+    'what is your Favroite Color',
+    'what do you want to be ?',
+    'which one is your favroite car',
+    'your favoite Movie'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           Container(
             margin: EdgeInsets.only(top: 50, left: 20, right: 20),
             child: Widgets.text(
-              'text',
+              questions[questionIndex],
               24,
               FontWeight.normal,
               Colors.white,
@@ -43,6 +51,10 @@ class _HomePageState extends State<HomePage> {
                       option2 = false;
                       option3 = false;
                       option4 = false;
+                      
+                      
+                   
+                      print(questionIndex);
                     });
                   },
                   child: Widgets.customButton(
